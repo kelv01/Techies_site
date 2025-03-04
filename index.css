@@ -311,11 +311,12 @@ nav{
   .site-footer {
     background: #222;
     color: #fff;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
+    margin-top: 40px;
   }
   
-  .site-footer .social-links {
+  /*.site-footer .social-links {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -327,9 +328,9 @@ nav{
   }
   
   .site-footer .social-links img {
-    height: 24px;
+    height: 20px;
     width: auto;
-  }
+  }*/
   
   /* Responsive Media Queries */
   @media screen and (max-width: 768px) {
