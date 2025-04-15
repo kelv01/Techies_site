@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Testimonials Slider | Owl Carousel</title>
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #1a1e25;
+            color: #fff;
+        }
+        
+        .testimonial-section {
+            padding: 60px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #f1c40f;
+        }
+        
+        .testimonial-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial-header {
+            margin-bottom: 20px;
+        }
+        
+        .quote-icon {
+            font-size: 2rem;
+            color: #f1c40f;
+            margin-right: 15px;
+        }
+        
+        .testimonial-title {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        
+        .testimonial-text {
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .rating {
+            margin-bottom: 20px;
+        }
+        
+        .star {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .client-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .client-details h4 {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .client-details p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Custom navigation styles */
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        
+        .owl-prev, .owl-next {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(241, 196, 15, 0.7) !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .owl-prev:hover, .owl-next:hover {
+            background-color: rgba(241, 196, 15, 1) !important;
+        }
+        
+        .owl-prev span, .owl-next span {
+            font-size: 1.8rem;
+            color: #1a1e25;
+        }
+        
+        .owl-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .owl-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3) !important;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .owl-dot.active {
+            background-color: #f1c40f !important;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-section {
+                padding: 40px 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .testimonial-item {
+                padding: 20px;
+            }
+            
+            .owl-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="testimonial-section">
+        <h2 class="section-title">What Clients Say</h2>
+        
+        <div class="owl-carousel testimonial-carousel owl-theme">
+            <!-- Testimonial Item 1 -->
+            <div class="testimonial-item">
+                <div class="testimonial-header">
+                    <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                    <h3 class="testimonial-title">Awesome Coding</h3>
+                </div>
+                <p class="testimonial-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                </p>
+                <div class="rating">
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">
+                        <img src="/api/placeholder/60/60" alt="Client 1">
+                    </div>
+                    <div class="client-details">
+                        <h4>Person Name</h4>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial Item 2 -->
+            <div class="testimonial-item">
+                <div class="testimonial-header">
+                    <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                    <h3 class="testimonial-title">Awesome Coding</h3>
+                </div>
+                <p class="testimonial-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                </p>
+                <div class="rating">
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">
+                        <img src="/api/placeholder/60/60" alt="Client 2">
+                    </div>
+                    <div class="client-details">
+                        <h4>Person Name</h4>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial Item 3 -->
+            <div class="testimonial-item">
+                <div class="testimonial-header">
+                    <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                    <h3 class="testimonial-title">Great Experience</h3>
+                </div>
+                <p class="testimonial-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                </p>
+                <div class="rating">
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star-half-alt"></i></span>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">
+                        <img src="/api/placeholder/60/60" alt="Client 3">
+                    </div>
+                    <div class="client-details">
+                        <h4>Another Client</h4>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial Item 4 -->
+            <div class="testimonial-item">
+                <div class="testimonial-header">
+                    <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                    <h3 class="testimonial-title">Highly Recommended</h3>
+                </div>
+                <p class="testimonial-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                </p>
+                <div class="rating">
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                    <span class="star"><i class="fas fa-star"></i></span>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">
+                        <img src="/api/placeholder/60/60" alt="Client 4">
+                    </div>
+                    <div class="client-details">
+                        <h4>Fourth Client</h4>
+                        <p>Business Owner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $(".testimonial-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                navText: ['<span>&larr;</span>', '<span>&rarr;</span>'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 2
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
